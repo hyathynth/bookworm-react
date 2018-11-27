@@ -61,11 +61,10 @@ class LoginForm extends Component {
 						value={this.state.data.password}
 						onChange={this.onChange}
 					/>
+					{this.state.errors.password && (
+						<InlineError text={this.state.errors.password} />
+					)}
 				</Form.Field>
-				{this.state.errors.password && (
-					<InlineError text={this.state.errors.password} />
-				)}
-				<br />
 				<Button primary>Login</Button>
 			</Form>
 		);
